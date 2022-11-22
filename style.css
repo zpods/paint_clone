@@ -1,0 +1,73 @@
+body {
+    overflow-y: hidden;
+}
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #999;
+    height: 50px;
+    width: 100%;
+}
+.top-bar > div {
+    padding: 5px 10px 5px 10px;
+}
+.brush, .bucket {
+    background-color: #555;
+    padding: 2px;
+    color: #fff
+}
+#brush:hover, #bucket:hover {
+    color: white;
+}
+.jscolor {
+    border-radius: 4px;
+    width: 100px;
+}
+.mobile-message {
+    display: none;
+}
+canvas#canvas {
+    position: absolute;
+    top: 58px;
+    cursor: crosshair;
+    z-index: 10;
+}
+.active-tool {
+    width: 80px;
+}
+.tool > i {
+    padding: 4px;
+}
+.active {
+    background-color: red;  
+    border-radius: 3px;
+}
+#undo-canvas:hover, 
+.save-storage:hover,
+#load-storage:hover,
+#clear-storage:hover
+{
+    background-color: red;  
+    border-radius: 3px;
+}
+
+/* media query for small size ecrans (mobile devices) */
+@media screen and (max-width: 800px) { 
+    .mobile-message {
+        position: absolute;
+        height:  100vh;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .top-bar {
+        display: none;
+    }
+}
